@@ -1,6 +1,6 @@
 import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer';
 
-const modules = import.meta.glob('./**/*.ts', { eager: true });
+const modules = import.meta.glob('./**/*.ts', { eager: true }); // 获取mock文件夹下的所有ts文件
 
 const mockModules: any[] = [];
 Object.keys(modules).forEach((key) => {

@@ -219,6 +219,7 @@ export const usePermissionStore = defineStore({
           try {
             this.changePermissionCode();
             routeList = (await getMenuList()) as AppRouteRecordRaw[];
+            console.log('routeList',  routeList);
             // update-begin----author:sunjianlei---date:20220315------for: 判断是否是 vue3 版本的菜单 ---
             let hasIndex: boolean = false;
             let hasIcon: boolean = false;

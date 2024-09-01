@@ -63,5 +63,30 @@ export const TokenLoginRoute: AppRouteRecordRaw = {
   },
 };
 
+/**
+ * 生命周期模型
+ */
+export const LifeCycleModelRoute: AppRouteRecordRaw = {
+  path: '/LifeCycleModel/detail',
+  name: 'LifeCycleModel',
+  component: () => import('/@/views/carbon-accounting/productCarbonFootprint/lifeCycleModel.vue'),
+  meta: {
+    title: '生命周期模型',
+    ignoreAuth: true, // 忽略权限
+  },
+};
+/**
+ * 因子详情
+ */
+export const FactorRoute: AppRouteRecordRaw = {
+  path: '/factor/detail',
+  name: 'FactorDetail',
+  component: () => import('/@/views/basic-setting/environmentFactor/factorDetail.vue'),
+  meta: {
+    title: '因子详情',
+    ignoreAuth: true, // 忽略权限
+  },
+};
+
 // Basic routing without permission
-export const basicRoutes = [LoginRoute, RootRoute, ...mainOutRoutes, REDIRECT_ROUTE, PAGE_NOT_FOUND_ROUTE, TokenLoginRoute, Oauth2LoginRoute];
+export const basicRoutes = [LoginRoute, RootRoute, ...mainOutRoutes, REDIRECT_ROUTE, PAGE_NOT_FOUND_ROUTE, TokenLoginRoute, Oauth2LoginRoute, FactorRoute, LifeCycleModelRoute];

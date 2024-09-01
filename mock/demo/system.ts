@@ -241,6 +241,15 @@ export default [
     },
   },
   {
+    url: `${baseUrl}/sys/user/getUserInfo`,
+    timeout: 100,
+    method: 'get',
+    response: ({ query }) => {
+      const { page = 1, pageSize = 20 } = query;
+      return resultPageSuccess(page, pageSize, testList);
+    },
+  },
+  {
     url: `${baseUrl}/system/getDemoTableListByPage`,
     timeout: 100,
     method: 'get',

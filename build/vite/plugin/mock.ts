@@ -5,6 +5,7 @@
 import { viteMockServe } from 'vite-plugin-mock';
 
 export function configMockPlugin(isBuild: boolean) {
+  console.log('configMockPlugin isBuild', !isBuild);
   return viteMockServe({
     ignore: /^\_/,
     mockPath: 'mock',
